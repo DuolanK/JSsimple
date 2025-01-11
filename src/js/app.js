@@ -63,3 +63,39 @@ console.log(user["age"]);
 
 user.greet();
 
+function check(people) {
+
+    people.forEach(human => {
+        if (human.age < 18) {
+            console.log("Запрет для объекта " + human.name);
+        }
+        else {
+            console.log("Разрешения для объекта " + human.name);
+        }
+    });
+    }
+
+
+    // ОБЪЕКТ
+let people = [
+    {    name: "Alice",
+        age: 25,
+        isAdmin: true,
+        greet() {
+            console.log('hello, my name is ' + this.name);
+        }},
+    {    name: "Pete",
+        age: 5,
+        isAdmin: true,
+        greet() {
+            console.log('hello, my name is ' + this.name);
+        }},
+    {    name: "Jio",
+        age: 15,
+        isAdmin: true,
+        greet() {
+            console.log('hello, my name is ' + this.name);
+        }},
+]
+
+check(people);
